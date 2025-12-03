@@ -1,0 +1,2327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Genoproteomics: The revolutionary field decoding the complete language between genes and proteins. From genotype to proteotype, not stopping at RNA.">
+    <meta name="keywords" content="genoproteomics, proteomics, genomics, protein structure, genetic variants, computational biology, precision medicine, drug discovery, AlphaFold, mass spectrometry">
+    <meta name="author" content="Kushal Raj Roy">
+    <meta property="og:title" content="Genoproteomics | From Genotype to Proteotype">
+    <meta property="og:description" content="A revolutionary new field in molecular biology - decoding the complete language between genes and proteins.">
+    <meta property="og:type" content="website">
+    <title>Genoproteomics | From Genotype to Proteotype | Founded by Kushal Raj Roy</title>
+    
+    <!-- Google Fonts - Extended Collection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================================================
+           GENOPROTEOMICS - ULTRA COLORFUL COMMERCIAL WEBSITE v3.0
+           Founded by Kushal Raj Roy
+           ========================================================================== */
+
+        /* --------------------------------------------------------------------------
+           CSS Variables
+           -------------------------------------------------------------------------- */
+        :root {
+            /* Backgrounds */
+            --bg-void: #000000;
+            --bg-deep: #050510;
+            --bg-dark: #0a0a15;
+            --bg-section: #0e0e1a;
+            --bg-card: #141425;
+            --bg-elevated: #1a1a30;
+            
+            /* Neon Colors */
+            --neon-cyan: #00ffff;
+            --neon-blue: #00d4ff;
+            --neon-purple: #8b5cf6;
+            --neon-violet: #a855f7;
+            --neon-magenta: #ff00ff;
+            --neon-pink: #f72585;
+            --neon-red: #ff3366;
+            --neon-orange: #ff6b35;
+            --neon-yellow: #ffd700;
+            --neon-lime: #39ff14;
+            --neon-green: #00ff88;
+            --neon-teal: #00ffc8;
+            
+            /* Gradients */
+            --gradient-aurora: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 50%, #f72585 100%);
+            --gradient-sunset: linear-gradient(135deg, #ff6b35 0%, #f72585 50%, #8b5cf6 100%);
+            --gradient-ocean: linear-gradient(135deg, #00ffc8 0%, #00d4ff 50%, #8b5cf6 100%);
+            --gradient-fire: linear-gradient(135deg, #ffd700 0%, #ff6b35 50%, #ff3366 100%);
+            --gradient-cosmic: linear-gradient(135deg, #8b5cf6 0%, #f72585 33%, #00d4ff 66%, #00ff88 100%);
+            --gradient-rainbow: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+            
+            /* Text */
+            --text-white: #ffffff;
+            --text-light: #e0e0f0;
+            --text-muted: #a0a0c0;
+            --text-dim: #606080;
+            
+            /* Typography */
+            --font-display: 'Orbitron', 'Syne', sans-serif;
+            --font-heading: 'Rajdhani', 'Space Grotesk', sans-serif;
+            --font-subhead: 'Exo 2', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            /* Layout */
+            --section-padding: 140px;
+            --container-max: 1400px;
+        }
+
+        /* --------------------------------------------------------------------------
+           Reset & Base
+           -------------------------------------------------------------------------- */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-void);
+            color: var(--text-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: var(--neon-cyan);
+            color: var(--bg-void);
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-aurora);
+            border-radius: 5px;
+        }
+
+        /* --------------------------------------------------------------------------
+           Animated Background
+           -------------------------------------------------------------------------- */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.3;
+            animation: floatOrb 25s ease-in-out infinite;
+        }
+
+        .bg-orb:nth-child(1) {
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, var(--neon-cyan) 0%, transparent 70%);
+            top: -300px;
+            left: -300px;
+            animation-delay: 0s;
+        }
+
+        .bg-orb:nth-child(2) {
+            width: 1000px;
+            height: 1000px;
+            background: radial-gradient(circle, var(--neon-purple) 0%, transparent 70%);
+            top: 30%;
+            right: -400px;
+            animation-delay: -8s;
+        }
+
+        .bg-orb:nth-child(3) {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--neon-pink) 0%, transparent 70%);
+            bottom: -200px;
+            left: 20%;
+            animation-delay: -16s;
+        }
+
+        .bg-orb:nth-child(4) {
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, var(--neon-green) 0%, transparent 70%);
+            top: 60%;
+            left: -200px;
+            animation-delay: -12s;
+        }
+
+        .bg-orb:nth-child(5) {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--neon-orange) 0%, transparent 70%);
+            top: 10%;
+            right: 10%;
+            animation-delay: -4s;
+        }
+
+        @keyframes floatOrb {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(60px, -40px) scale(1.1); }
+            50% { transform: translate(-40px, 60px) scale(0.9); }
+            75% { transform: translate(-60px, -30px) scale(1.05); }
+        }
+
+        .bg-grid {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridMove 30s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(60px, 60px); }
+        }
+
+        /* --------------------------------------------------------------------------
+           Container
+           -------------------------------------------------------------------------- */
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        /* --------------------------------------------------------------------------
+           Gradient Text Utilities
+           -------------------------------------------------------------------------- */
+        .gradient-text {
+            background: var(--gradient-aurora);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text-fire {
+            background: var(--gradient-fire);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text-ocean {
+            background: var(--gradient-ocean);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text-cosmic {
+            background: var(--gradient-cosmic);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 300% 300%;
+            animation: cosmicShift 8s ease infinite;
+        }
+
+        @keyframes cosmicShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* --------------------------------------------------------------------------
+           Navigation
+           -------------------------------------------------------------------------- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10000;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(5, 5, 15, 0.85);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .navbar.scrolled {
+            padding: 15px 50px;
+            background: rgba(5, 5, 15, 0.98);
+            box-shadow: 0 5px 30px rgba(0, 255, 255, 0.1);
+        }
+
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            background: var(--gradient-aurora);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-aurora);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 20px var(--neon-cyan);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 14px 32px;
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--bg-void);
+            background: var(--gradient-aurora);
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 255, 255, 0.4);
+        }
+
+        .nav-cta:hover::before {
+            left: 100%;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .nav-toggle span {
+            width: 28px;
+            height: 2px;
+            background: var(--neon-cyan);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px var(--neon-cyan);
+        }
+
+        /* --------------------------------------------------------------------------
+           Hero Section - FIXED TITLE SIZE
+           -------------------------------------------------------------------------- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 160px 30px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 140%;
+            height: 140%;
+            background: radial-gradient(ellipse at center, 
+                rgba(0, 212, 255, 0.15) 0%, 
+                rgba(139, 92, 246, 0.1) 30%,
+                rgba(247, 37, 133, 0.05) 50%,
+                transparent 70%);
+            animation: heroGlow 10s ease-in-out infinite;
+        }
+
+        @keyframes heroGlow {
+            0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1.15); }
+        }
+
+        .dna-helix {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .dna-strand {
+            position: absolute;
+            border-radius: 50%;
+            animation: floatParticle 20s linear infinite;
+        }
+
+        @keyframes floatParticle {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 28px;
+            background: rgba(0, 255, 255, 0.08);
+            border: 1px solid rgba(0, 255, 255, 0.25);
+            border-radius: 50px;
+            margin-bottom: 35px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero-badge-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--neon-green);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+            box-shadow: 0 0 15px var(--neon-green);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.7; }
+        }
+
+        .hero-badge-text {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--neon-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* FIXED: Title now properly sizes and doesn't overflow */
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.8rem, 8vw, 7rem);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.01em;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s both;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-subhead);
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-weight: 300;
+            color: var(--text-light);
+            max-width: 850px;
+            margin: 0 auto 25px;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-subtitle em {
+            font-style: normal;
+            color: var(--neon-cyan);
+            font-weight: 500;
+        }
+
+        .hero-tagline {
+            font-family: var(--font-body);
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 45px;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.8s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 40px;
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--gradient-aurora);
+            color: var(--bg-void);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 
+                0 20px 50px rgba(0, 212, 255, 0.4),
+                0 0 60px rgba(139, 92, 246, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-white);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--neon-cyan);
+            color: var(--neon-cyan);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.25), inset 0 0 30px rgba(0, 255, 255, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .btn-icon {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover .btn-icon {
+            transform: translateX(5px);
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            animation: fadeIn 1s ease 1.2s both, bounce 2.5s ease-in-out infinite 2s;
+        }
+
+        .scroll-text {
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--text-dim);
+        }
+
+        .scroll-icon {
+            width: 26px;
+            height: 45px;
+            border: 2px solid var(--text-dim);
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .scroll-icon::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 10px;
+            background: var(--neon-cyan);
+            border-radius: 2px;
+            animation: scrollDot 2s ease-in-out infinite;
+            box-shadow: 0 0 10px var(--neon-cyan);
+        }
+
+        @keyframes scrollDot {
+            0%, 100% { top: 8px; opacity: 1; }
+            50% { top: 22px; opacity: 0.3; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(12px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* --------------------------------------------------------------------------
+           Stats Section
+           -------------------------------------------------------------------------- */
+        .stats-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-section) 50%, var(--bg-dark) 100%);
+            position: relative;
+        }
+
+        .stats-section::before,
+        .stats-section::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-cyan), var(--neon-purple), var(--neon-pink), transparent);
+        }
+
+        .stats-section::before { top: 0; }
+        .stats-section::after { bottom: 0; }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 25px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 45px 20px;
+            background: linear-gradient(145deg, rgba(139, 92, 246, 0.08) 0%, rgba(0, 212, 255, 0.05) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 25px;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-aurora);
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-12px);
+            border-color: rgba(0, 255, 255, 0.3);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 255, 255, 0.1);
+        }
+
+        .stat-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .stat-card:nth-child(1) .stat-number { color: var(--neon-cyan); text-shadow: 0 0 30px var(--neon-cyan); }
+        .stat-card:nth-child(2) .stat-number { color: var(--neon-purple); text-shadow: 0 0 30px var(--neon-purple); }
+        .stat-card:nth-child(3) .stat-number { color: var(--neon-pink); text-shadow: 0 0 30px var(--neon-pink); }
+        .stat-card:nth-child(4) .stat-number { color: var(--neon-green); text-shadow: 0 0 30px var(--neon-green); }
+        .stat-card:nth-child(5) .stat-number { color: var(--neon-orange); text-shadow: 0 0 30px var(--neon-orange); }
+
+        .stat-label {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            line-height: 1.4;
+        }
+
+        /* --------------------------------------------------------------------------
+           Vision / Problem Section
+           -------------------------------------------------------------------------- */
+        .vision-section {
+            padding: var(--section-padding) 0;
+            position: relative;
+        }
+
+        .vision-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .vision-text h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 35px;
+        }
+
+        .vision-text p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 22px;
+            line-height: 1.85;
+        }
+
+        .vision-text p strong {
+            color: var(--text-white);
+        }
+
+        .vision-highlight {
+            padding: 28px 32px;
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.08), rgba(139, 92, 246, 0.08));
+            border-left: 4px solid var(--neon-cyan);
+            border-radius: 0 20px 20px 0;
+            margin: 35px 0;
+        }
+
+        .vision-highlight p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .vision-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Molecule Animation */
+        .molecule-container {
+            width: 100%;
+            max-width: 480px;
+            aspect-ratio: 1;
+            position: relative;
+        }
+
+        .molecule-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            border: 2px solid;
+            transform: translate(-50%, -50%);
+        }
+
+        .molecule-ring:nth-child(1) {
+            width: 100%;
+            height: 100%;
+            border-color: rgba(0, 255, 255, 0.25);
+            animation: spinRing 28s linear infinite;
+        }
+
+        .molecule-ring:nth-child(2) {
+            width: 78%;
+            height: 78%;
+            border-color: rgba(139, 92, 246, 0.25);
+            animation: spinRing 22s linear infinite reverse;
+        }
+
+        .molecule-ring:nth-child(3) {
+            width: 56%;
+            height: 56%;
+            border-color: rgba(247, 37, 133, 0.25);
+            animation: spinRing 18s linear infinite;
+        }
+
+        .molecule-ring:nth-child(4) {
+            width: 34%;
+            height: 34%;
+            border-color: rgba(0, 255, 136, 0.25);
+            animation: spinRing 14s linear infinite reverse;
+        }
+
+        @keyframes spinRing {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .molecule-core {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 130px;
+            height: 130px;
+            background: var(--gradient-aurora);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--bg-void);
+            animation: coreGlow 4s ease-in-out infinite;
+            box-shadow: 
+                0 0 40px rgba(0, 212, 255, 0.5),
+                0 0 80px rgba(139, 92, 246, 0.4);
+        }
+
+        @keyframes coreGlow {
+            0%, 100% { box-shadow: 0 0 40px rgba(0, 212, 255, 0.5), 0 0 80px rgba(139, 92, 246, 0.4); }
+            50% { box-shadow: 0 0 60px rgba(0, 212, 255, 0.7), 0 0 100px rgba(139, 92, 246, 0.6); }
+        }
+
+        .orbit-node {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            box-shadow: 0 0 15px currentColor;
+        }
+
+        .orbit-node:nth-child(6) {
+            background: var(--neon-cyan);
+            color: var(--neon-cyan);
+            animation: orbitPath1 28s linear infinite;
+        }
+
+        .orbit-node:nth-child(7) {
+            background: var(--neon-purple);
+            color: var(--neon-purple);
+            animation: orbitPath2 22s linear infinite;
+        }
+
+        .orbit-node:nth-child(8) {
+            background: var(--neon-pink);
+            color: var(--neon-pink);
+            animation: orbitPath3 18s linear infinite;
+        }
+
+        .orbit-node:nth-child(9) {
+            background: var(--neon-green);
+            color: var(--neon-green);
+            animation: orbitPath4 14s linear infinite;
+        }
+
+        @keyframes orbitPath1 { from { transform: rotate(0deg) translateX(240px) rotate(0deg); } to { transform: rotate(360deg) translateX(240px) rotate(-360deg); } }
+        @keyframes orbitPath2 { from { transform: rotate(90deg) translateX(187px) rotate(-90deg); } to { transform: rotate(450deg) translateX(187px) rotate(-450deg); } }
+        @keyframes orbitPath3 { from { transform: rotate(180deg) translateX(134px) rotate(-180deg); } to { transform: rotate(540deg) translateX(134px) rotate(-540deg); } }
+        @keyframes orbitPath4 { from { transform: rotate(270deg) translateX(82px) rotate(-270deg); } to { transform: rotate(630deg) translateX(82px) rotate(-630deg); } }
+
+        /* --------------------------------------------------------------------------
+           Mission Section
+           -------------------------------------------------------------------------- */
+        .mission-section {
+            padding: var(--section-padding) 0;
+            background: var(--bg-section);
+            text-align: center;
+            position: relative;
+        }
+
+        .mission-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 80px;
+            background: linear-gradient(180deg, transparent, var(--neon-cyan));
+        }
+
+        .section-label {
+            display: inline-block;
+            padding: 10px 28px;
+            background: rgba(247, 37, 133, 0.1);
+            border: 1px solid rgba(247, 37, 133, 0.3);
+            border-radius: 30px;
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--neon-pink);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            margin-bottom: 30px;
+        }
+
+        .mission-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 3.2rem);
+            font-weight: 800;
+            line-height: 1.25;
+            max-width: 1000px;
+            margin: 0 auto 50px;
+        }
+
+        .mission-quote {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 45px 50px;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(139, 92, 246, 0.05));
+            border-left: 4px solid var(--neon-cyan);
+            border-radius: 0 25px 25px 0;
+            position: relative;
+        }
+
+        .mission-quote::before {
+            content: '"';
+            position: absolute;
+            top: 15px;
+            left: 25px;
+            font-family: Georgia, serif;
+            font-size: 5rem;
+            color: var(--neon-cyan);
+            opacity: 0.25;
+            line-height: 1;
+        }
+
+        .mission-quote p {
+            font-family: var(--font-subhead);
+            font-size: 1.4rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--text-light);
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+
+        .mission-quote cite {
+            display: block;
+            margin-top: 20px;
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-style: normal;
+            color: var(--neon-cyan);
+            font-weight: 600;
+        }
+
+        /* --------------------------------------------------------------------------
+           Research Areas Section
+           -------------------------------------------------------------------------- */
+        .research-section {
+            padding: var(--section-padding) 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            padding: 10px 28px;
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 30px;
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--neon-green);
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4.5vw, 3.8rem);
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .research-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 25px;
+            padding: 40px 35px;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .research-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            transition: transform 0.5s ease;
+            transform: scaleX(0);
+        }
+
+        .research-card:nth-child(1)::before { background: var(--gradient-aurora); }
+        .research-card:nth-child(2)::before { background: var(--gradient-sunset); }
+        .research-card:nth-child(3)::before { background: var(--gradient-ocean); }
+        .research-card:nth-child(4)::before { background: var(--gradient-fire); }
+        .research-card:nth-child(5)::before { background: var(--gradient-cosmic); }
+        .research-card:nth-child(6)::before { background: var(--gradient-aurora); }
+
+        .research-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(0, 255, 255, 0.2);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .research-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .research-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 2rem;
+        }
+
+        .research-card:nth-child(1) .research-icon { background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(139, 92, 246, 0.2)); }
+        .research-card:nth-child(2) .research-icon { background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(247, 37, 133, 0.2)); }
+        .research-card:nth-child(3) .research-icon { background: linear-gradient(135deg, rgba(0, 255, 200, 0.2), rgba(0, 212, 255, 0.2)); }
+        .research-card:nth-child(4) .research-icon { background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 107, 53, 0.2)); }
+        .research-card:nth-child(5) .research-icon { background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(247, 37, 133, 0.2)); }
+        .research-card:nth-child(6) .research-icon { background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(0, 212, 255, 0.2)); }
+
+        .research-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text-white);
+        }
+
+        .research-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .research-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .research-topic {
+            padding: 6px 14px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: 15px;
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--neon-cyan);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        /* --------------------------------------------------------------------------
+           Projects Section
+           -------------------------------------------------------------------------- */
+        .projects-section {
+            padding: var(--section-padding) 0;
+            background: var(--bg-section);
+            position: relative;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 30px;
+            padding: 50px;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+        }
+
+        .project-card:nth-child(1)::before { background: var(--gradient-aurora); }
+        .project-card:nth-child(2)::before { background: var(--gradient-fire); }
+        .project-card:nth-child(3)::before { background: var(--gradient-ocean); }
+        .project-card:nth-child(4)::before { background: var(--gradient-sunset); }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            border-color: rgba(0, 255, 255, 0.2);
+        }
+
+        .project-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 25px;
+        }
+
+        .project-status.active {
+            background: rgba(0, 255, 136, 0.15);
+            color: var(--neon-green);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+        }
+
+        .project-status.upcoming {
+            background: rgba(255, 215, 0, 0.15);
+            color: var(--neon-yellow);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .project-status.research {
+            background: rgba(139, 92, 246, 0.15);
+            color: var(--neon-purple);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+
+        .project-status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .project-status.active .project-status-dot { background: var(--neon-green); }
+        .project-status.upcoming .project-status-dot { background: var(--neon-yellow); }
+        .project-status.research .project-status-dot { background: var(--neon-purple); }
+
+        .project-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            color: var(--text-white);
+        }
+
+        .project-card > p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .project-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .project-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .project-features li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-tag {
+            padding: 8px 16px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: 20px;
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--neon-purple);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        /* --------------------------------------------------------------------------
+           Technology Section
+           -------------------------------------------------------------------------- */
+        .tech-section {
+            padding: var(--section-padding) 0;
+            position: relative;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .tech-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .tech-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            border-radius: 15px;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(139, 92, 246, 0.15));
+        }
+
+        .tech-card h4 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-white);
+        }
+
+        .tech-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* --------------------------------------------------------------------------
+           Process / Framework Section
+           -------------------------------------------------------------------------- */
+        .process-section {
+            padding: var(--section-padding) 0;
+            background: var(--bg-section);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            position: relative;
+        }
+
+        .process-grid::before {
+            content: '';
+            position: absolute;
+            top: 55px;
+            left: 12%;
+            right: 12%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink), var(--neon-green));
+            border-radius: 2px;
+            z-index: 0;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--bg-void);
+            position: relative;
+        }
+
+        .step-number::after {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border-radius: 50%;
+            background: inherit;
+            opacity: 0.3;
+            filter: blur(12px);
+            z-index: -1;
+        }
+
+        .process-step:nth-child(1) .step-number { background: var(--neon-cyan); }
+        .process-step:nth-child(2) .step-number { background: var(--neon-purple); }
+        .process-step:nth-child(3) .step-number { background: var(--neon-pink); }
+        .process-step:nth-child(4) .step-number { background: var(--neon-green); }
+
+        .process-step h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text-white);
+        }
+
+        .process-step p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* --------------------------------------------------------------------------
+           Founder Section
+           -------------------------------------------------------------------------- */
+        .founder-section {
+            padding: var(--section-padding) 0;
+            position: relative;
+        }
+
+        .founder-content {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .founder-image {
+            position: relative;
+        }
+
+        .founder-photo {
+            width: 100%;
+            aspect-ratio: 3/4;
+            border-radius: 30px;
+            background: linear-gradient(145deg, rgba(139, 92, 246, 0.1), rgba(0, 212, 255, 0.1));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .founder-photo::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            background: var(--gradient-aurora);
+            border-radius: 32px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .founder-initials {
+            font-family: var(--font-display);
+            font-size: 5rem;
+            font-weight: 900;
+            background: var(--gradient-aurora);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .founder-badge {
+            position: absolute;
+            bottom: -18px;
+            right: -18px;
+            background: var(--gradient-aurora);
+            padding: 14px 28px;
+            border-radius: 15px;
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--bg-void);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .founder-info h3 {
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--neon-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            margin-bottom: 18px;
+        }
+
+        .founder-info h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+
+        .founder-info > p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.85;
+            margin-bottom: 20px;
+        }
+
+        .founder-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .credential {
+            padding: 12px 22px;
+            background: var(--bg-card);
+            border-radius: 12px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .credential strong {
+            color: var(--text-white);
+        }
+
+        /* --------------------------------------------------------------------------
+           CTA Section
+           -------------------------------------------------------------------------- */
+        .cta-section {
+            padding: var(--section-padding) 0;
+            background: var(--bg-section);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 900px;
+            height: 900px;
+            background: radial-gradient(ellipse, rgba(139, 92, 246, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        .cta-text {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 45px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* --------------------------------------------------------------------------
+           Footer
+           -------------------------------------------------------------------------- */
+        .footer {
+            padding: 60px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background: var(--bg-deep);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: var(--gradient-aurora);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--neon-cyan);
+        }
+
+        .footer-copy {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        /* --------------------------------------------------------------------------
+           Responsive Design
+           -------------------------------------------------------------------------- */
+        @media (max-width: 1200px) {
+            .stats-grid { grid-template-columns: repeat(3, 1fr); }
+            .research-grid { grid-template-columns: repeat(2, 1fr); }
+            .tech-grid { grid-template-columns: repeat(2, 1fr); }
+            .founder-content { grid-template-columns: 320px 1fr; gap: 60px; }
+        }
+
+        @media (max-width: 992px) {
+            :root { --section-padding: 100px; }
+            .container { padding: 0 30px; }
+            
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .vision-content { grid-template-columns: 1fr; gap: 60px; }
+            .vision-visual { order: -1; }
+            .molecule-container { max-width: 380px; margin: 0 auto; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-grid::before { display: none; }
+            .founder-content { grid-template-columns: 1fr; gap: 50px; }
+            .founder-image { max-width: 320px; margin: 0 auto; }
+        }
+
+        @media (max-width: 768px) {
+            .navbar { padding: 15px 25px; }
+            
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                background: rgba(5, 5, 15, 0.98);
+                backdrop-filter: blur(30px);
+            }
+            
+            .nav-links.active { display: flex; }
+            .nav-links a { font-size: 1.2rem; }
+            .nav-cta { display: none; }
+            .nav-toggle { display: flex; }
+            
+            .hero { padding: 140px 20px 80px; }
+            .hero-title { font-size: clamp(2.2rem, 10vw, 4rem); }
+            
+            .stats-grid { grid-template-columns: 1fr; }
+            .stat-number { font-size: 2.8rem; }
+            
+            .research-grid { grid-template-columns: 1fr; }
+            .tech-grid { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: 1fr; }
+            
+            .footer-content { flex-direction: column; text-align: center; }
+            .footer-links { flex-wrap: wrap; justify-content: center; }
+            
+            .btn { width: 100%; max-width: 300px; justify-content: center; }
+            .hero-buttons, .cta-buttons { flex-direction: column; align-items: center; }
+        }
+
+        @media (max-width: 480px) {
+            :root { --section-padding: 80px; }
+            .container { padding: 0 20px; }
+            
+            .hero-badge { padding: 10px 20px; }
+            .hero-badge-text { font-size: 0.75rem; letter-spacing: 0.15em; }
+            
+            .project-card { padding: 35px 25px; }
+            .founder-initials { font-size: 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="bg-orb"></div>
+        <div class="bg-orb"></div>
+        <div class="bg-orb"></div>
+        <div class="bg-orb"></div>
+        <div class="bg-orb"></div>
+        <div class="bg-grid"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-logo">Genoproteomics</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#vision">Vision</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#technology">Technology</a></li>
+            <li><a href="#founder">Founder</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">Get Involved</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-glow"></div>
+            <div class="dna-helix" id="dnaHelix"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                <span class="hero-badge-text">A New Era in Molecular Biology</span>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="gradient-text-cosmic">Genoproteomics</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                From genotype to proteotype—<em>not stopping at RNA</em>.
+            </p>
+            
+            <p class="hero-tagline">
+                We're decoding the complete language between genes and proteins, 
+                building the future of precision medicine.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    Explore Our Research
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#vision" class="btn btn-secondary">
+                    Learn More
+                </a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll to Explore</span>
+            <div class="scroll-icon"></div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">80%</div>
+                    <div class="stat-label">Disease Variants<br>Unexplained</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">20K+</div>
+                    <div class="stat-label">Human Proteins<br>To Decode</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">~50%</div>
+                    <div class="stat-label">Protein Changes<br>Missed by RNA</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">400+</div>
+                    <div class="stat-label">PTM Types<br>To Map</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Therapeutic<br>Potential</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision-section" id="vision">
+        <div class="container">
+            <div class="vision-content">
+                <div class="vision-text">
+                    <h2>The genome promised us everything. <span class="gradient-text">It delivered half.</span></h2>
+                    
+                    <p>For decades, we've sequenced genomes and measured transcripts, believing RNA would tell us everything about cellular function. <strong>It doesn't.</strong></p>
+                    
+                    <p>Proteins are the true executors of life. They fold, they modify, they interact, they degrade—all beyond the reach of transcriptomics. GWAS studies identify thousands of disease-associated variants, yet most remain mechanistically unexplained.</p>
+                    
+                    <div class="vision-highlight">
+                        <p><strong>Genoproteomics bridges this gap.</strong> We systematically map how every genetic variant shapes the proteome—its structure, modifications, interactions, and dynamics.</p>
+                    </div>
+                    
+                    <p>Not predictions. Not proxies. <strong>Direct, measurable, actionable protein phenotypes.</strong></p>
+                </div>
+                
+                <div class="vision-visual">
+                    <div class="molecule-container">
+                        <div class="molecule-ring"></div>
+                        <div class="molecule-ring"></div>
+                        <div class="molecule-ring"></div>
+                        <div class="molecule-ring"></div>
+                        <div class="molecule-core">G→P</div>
+                        <div class="orbit-node"></div>
+                        <div class="orbit-node"></div>
+                        <div class="orbit-node"></div>
+                        <div class="orbit-node"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section" id="mission">
+        <div class="container">
+            <span class="section-label">Our Mission</span>
+            
+            <h2 class="mission-title">
+                To build the <span class="gradient-text">complete map</span> from genetic variation to protein phenotype—enabling precision medicine that actually reaches the molecules that matter.
+            </h2>
+            
+            <blockquote class="mission-quote">
+                <p>Most drugs target proteins, not RNA. Most cellular functions are executed by proteins, not RNA. It's time our understanding of genetic variation caught up with this reality.</p>
+                <cite>— Kushal Raj Roy, Founder</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Research Areas Section -->
+    <section class="research-section" id="research">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Research Areas</span>
+                <h2 class="section-title">Pioneering <span class="gradient-text">Six Frontiers</span></h2>
+                <p class="section-subtitle">Our research spans computational, structural, translational, evolutionary, technological, and systems biology domains.</p>
+            </div>
+            
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-icon">🧬</div>
+                    <h3>Computational Genoproteomics</h3>
+                    <p>Developing AI models and algorithms to predict how genetic variants affect protein structure, function, and abundance.</p>
+                    <div class="research-topics">
+                        <span class="research-topic">Deep Learning</span>
+                        <span class="research-topic">pQTL Mapping</span>
+                        <span class="research-topic">Multi-omics</span>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-icon">🔬</div>
+                    <h3>Structural Genoproteomics</h3>
+                    <p>Investigating how genetic variants alter protein 3D structure, dynamics, and interaction surfaces through computation and experiment.</p>
+                    <div class="research-topics">
+                        <span class="research-topic">AlphaFold</span>
+                        <span class="research-topic">Cryo-EM</span>
+                        <span class="research-topic">MD Simulations</span>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-icon">💊</div>
+                    <h3>Translational Genoproteomics</h3>
+                    <p>Applying genoproteomics to precision medicine, drug discovery, and therapeutic target validation.</p>
+                    <div class="research-topics">
+                        <span class="research-topic">Pharmacogenomics</span>
+                        <span class="research-topic">Biomarkers</span>
+                        <span class="research-topic">Cancer</span>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-icon">🌿</div>
+                    <h3>Evolutionary Genoproteomics</h3>
+                    <p>Studying how natural selection acts on the genotype-to-proteotype map across species and populations.</p>
+                    <div class="research-topics">
+                        <span class="research-topic">Comparative</span>
+                        <span class="research-topic">Population</span>
+                        <span class="research-topic">Epistasis</span>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-icon">⚡</div>
+                    <h3>Technological Genoproteomics</h3>
+                    <p>Developing new experimental technologies for high-resolution, high-throughput genotype-to-proteotype mapping.</p>
+                    <div class="research-topics">
+                        <span class="research-topic">Mass Spec</span>
+                        <span class="research-topic">Single-cell</span>
+                        <span class="research-topic">CRISPR</span>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-icon">🔄</div>
+                    <h3>Systems Genoproteomics</h3>
+                    <p>Integrating protein networks, signaling pathways, and cellular dynamics into unified genotype-phenotype models.</p>
+                    <div class="research-topics">
+                        <span class="research-topic">Networks</span>
+                        <span class="research-topic">Dynamics</span>
+                        <span class="research-topic">PTMs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" style="background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.3); color: var(--neon-purple);">Flagship Projects</span>
+                <h2 class="section-title">Building the <span class="gradient-text-fire">Future</span></h2>
+                <p class="section-subtitle">Our ambitious projects are laying the foundation for a new understanding of genetic disease.</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-status active">
+                        <span class="project-status-dot"></span>
+                        Active Development
+                    </div>
+                    <h3>Variant-to-Proteotype Atlas</h3>
+                    <p>Systematically mapping how coding variants in disease-associated genes alter protein structure, stability, and interaction interfaces.</p>
+                    <ul class="project-features">
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            <span>500 disease genes in Phase 1</span>
+                        </li>
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            <span>AlphaFold + MD simulations</span>
+                        </li>
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            <span>HDX-MS experimental validation</span>
+                        </li>
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            <span>Focus on VUS interpretation</span>
+                        </li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="project-tag">Structural</span>
+                        <span class="project-tag">Computational</span>
+                        <span class="project-tag">Disease</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-status research">
+                        <span class="project-status-dot"></span>
+                        Research Phase
+                    </div>
+                    <h3>Translational GTPase Dynamics</h3>
+                    <p>Investigating how sequence variations in elongation factors (EF-G, EF-Tu, EF-2, IF2) affect ribosomal translation mechanisms.</p>
+                    <ul class="project-features">
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-purple)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            <span>100+ protein structures analyzed</span>
+                        </li>
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-purple)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            <span>239 sequence windows mapped</span>
+                        </li>
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-purple)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            <span>Novel conformational states discovered</span>
+                        </li>
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-purple)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            <span>Hierarchical clustering methods</span>
+                        </li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="project-tag">Translation</span>
+                        <span class="project-tag">GTPases</span>
+                        <span class="project-tag">Ribosomes</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-status upcoming">
+                        <span class="project-status-dot"></span>
+                        Coming Soon
+                    </div>
+                    <h3>PTM-Variant Interaction Map</h3>
+                    <p>Building comprehensive maps of how genetic variants affect post-translational modification sites across the human proteome.</p>
+                    <ul class="project-features">
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-yellow)" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                            <span>Phosphorylation, ubiquitination, acetylation</span>
+                        </li>
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-yellow)" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                            <span>Integration with disease databases</span>
+                        </li>
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-yellow)" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                            <span>Kinase-substrate network analysis</span>
+                        </li>
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-yellow)" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                            <span>Drug target implications</span>
+                        </li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="project-tag">PTMs</span>
+                        <span class="project-tag">Signaling</span>
+                        <span class="project-tag">Networks</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-status upcoming">
+                        <span class="project-status-dot"></span>
+                        Planned
+                    </div>
+                    <h3>Proteome Turnover Genomics</h3>
+                    <p>Mapping how genetic variants affect protein synthesis rates, half-lives, and degradation pathways across cell types.</p>
+                    <ul class="project-features">
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-yellow)" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                            <span>SILAC-based turnover measurements</span>
+                        </li>
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-yellow)" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                            <span>Ribosome profiling integration</span>
+                        </li>
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-yellow)" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                            <span>Ubiquitin-proteasome pathway</span>
+                        </li>
+                        <li>
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-yellow)" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                            <span>Disease state comparisons</span>
+                        </li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="project-tag">Dynamics</span>
+                        <span class="project-tag">Turnover</span>
+                        <span class="project-tag">Degradation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="tech-section" id="technology">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" style="background: rgba(0, 212, 255, 0.1); border-color: rgba(0, 212, 255, 0.3); color: var(--neon-cyan);">Technology Stack</span>
+                <h2 class="section-title">Powered by <span class="gradient-text-ocean">Innovation</span></h2>
+                <p class="section-subtitle">Cutting-edge computational and experimental methods driving our research.</p>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">🤖</div>
+                    <h4>AlphaFold & ESMFold</h4>
+                    <p>AI-powered protein structure prediction for variant modeling</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">⚛️</div>
+                    <h4>Molecular Dynamics</h4>
+                    <p>GROMACS simulations for conformational dynamics</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">📊</div>
+                    <h4>Mass Spectrometry</h4>
+                    <p>HDX-MS, TMT, DIA for proteome quantification</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🧊</div>
+                    <h4>Cryo-EM</h4>
+                    <p>High-resolution structural validation</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🧬</div>
+                    <h4>CRISPR Screens</h4>
+                    <p>Variant libraries with proteome readouts</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">📈</div>
+                    <h4>Machine Learning</h4>
+                    <p>Deep learning for variant effect prediction</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🔗</div>
+                    <h4>Network Analysis</h4>
+                    <p>Protein interaction and pathway modeling</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🗃️</div>
+                    <h4>Data Integration</h4>
+                    <p>Multi-omic pipelines with reproducible workflows</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" style="background: rgba(247, 37, 133, 0.1); border-color: rgba(247, 37, 133, 0.3); color: var(--neon-pink);">Our Framework</span>
+                <h2 class="section-title">From <span class="gradient-text">Sequence to Function</span></h2>
+                <p class="section-subtitle">A systematic four-step approach to variant-proteotype mapping.</p>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Variant Curation</h3>
+                    <p>Curate disease and population variants from GWAS, ClinVar, and gnomAD with protein-level annotations.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Structure Modeling</h3>
+                    <p>Predict variant impact on 3D structure using AlphaFold, MD simulations, and free energy calculations.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Experimental Validation</h3>
+                    <p>Validate predictions with HDX-MS, thermal stability assays, and protein-protein interaction mapping.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Mechanistic Models</h3>
+                    <p>Build quantitative models linking variants to proteome phenotypes: abundance, PTMs, localization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section" id="founder">
+        <div class="container">
+            <div class="founder-content">
+                <div class="founder-image">
+                    <div class="founder-photo">
+                        <span class="founder-initials">KRR</span>
+                    </div>
+                    <div class="founder-badge">Founder & CEO</div>
+                </div>
+                
+                <div class="founder-info">
+                    <h3>Leadership</h3>
+                    <h2><span class="gradient-text">Kushal Raj Roy</span></h2>
+                    
+                    <p>A computational structural biologist pioneering the integration of genetic variation with protein structure and function. With expertise spanning molecular dynamics simulations, AlphaFold predictions, and mass spectrometry-based proteomics.</p>
+                    
+                    <p>His research focuses on translational GTPases and ribosomal translation mechanisms—the molecular machines that convert genetic information into proteins. This work revealed how subtle sequence variations propagate through protein structure to alter cellular function.</p>
+                    
+                    <p>Genoproteomics emerged from a fundamental insight: <strong>we have the tools to connect every genetic variant to its protein-level consequences.</strong> The field just needs to be built.</p>
+                    
+                    <div class="founder-credentials">
+                        <span class="credential"><strong>Focus:</strong> Computational Structural Biology</span>
+                        <span class="credential"><strong>Research:</strong> Translational GTPases</span>
+                        <span class="credential"><strong>Methods:</strong> MD, AlphaFold, Cryo-EM, MS</span>
+                        <span class="credential"><strong>Tools:</strong> GROMACS, PyMOL, Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">The proteome awaits.<br><span class="gradient-text">Join the revolution.</span></h2>
+                <p class="cta-text">We're building a new field from the ground up. Scientists, engineers, and visionaries welcome.</p>
+                <div class="cta-buttons">
+                    <a href="mailto:contact@genoproteomics.org" class="btn btn-primary">
+                        Get In Touch
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kroy3/genoproteomics.github.io" class="btn btn-secondary">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Genoproteomics</div>
+                <ul class="footer-links">
+                    <li><a href="#vision">Vision</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#founder">Founder</a></li>
+                    <li><a href="mailto:contact@genoproteomics.org">Contact</a></li>
+                </ul>
+                <p class="footer-copy">© 2025 Genoproteomics Initiative. Founded by Kushal Raj Roy.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Navigation
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 85;
+                    const position = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: position, behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Generate DNA Particles
+        const dnaHelix = document.getElementById('dnaHelix');
+        const colors = ['#00ffff', '#8b5cf6', '#f72585', '#00ff88', '#ffd700', '#ff6b35'];
+        
+        for (let i = 0; i < 50; i++) {
+            const strand = document.createElement('div');
+            strand.className = 'dna-strand';
+            strand.style.left = Math.random() * 100 + '%';
+            strand.style.animationDelay = Math.random() * 25 + 's';
+            strand.style.animationDuration = (18 + Math.random() * 12) + 's';
+            
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const size = 3 + Math.random() * 6;
+            
+            strand.style.width = size + 'px';
+            strand.style.height = size + 'px';
+            strand.style.background = color;
+            strand.style.boxShadow = `0 0 ${12 + Math.random() * 15}px ${color}`;
+            
+            dnaHelix.appendChild(strand);
+        }
+        
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -60px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.stat-card, .research-card, .project-card, .tech-card, .process-step').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(35px)';
+            el.style.transition = `opacity 0.7s ease ${index * 0.08}s, transform 0.7s ease ${index * 0.08}s`;
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
