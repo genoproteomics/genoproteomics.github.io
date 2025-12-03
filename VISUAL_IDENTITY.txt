@@ -1,0 +1,86 @@
+GENOPROTEOMICS VISUAL IDENTITY CONCEPT
+======================================
+
+LOGO CONCEPT
+------------
+A minimal, abstract mark that visually bridges the genome-to-proteome concept.
+
+Primary concept: An intertwined double helix (DNA) that transitions or morphs 
+into a folded protein structure (alpha helix or abstract 3D fold). The left 
+side of the mark shows the characteristic ladder/twist of DNA, which 
+seamlessly flows into a more complex, folded shape on the right—symbolizing 
+the transformation from genetic code to functional protein.
+
+Alternative concept: A stylized "G" letterform where the crossbar is formed 
+by a small folded protein motif, and the curve incorporates a subtle double 
+helix pattern. This would work well as a favicon and social media avatar.
+
+Visual qualities to emphasize:
+- Clean, geometric lines (not overly organic or "biotech-slick")
+- Single continuous stroke if possible (representing the flow from gene to protein)
+- Works at small sizes (favicon, mobile)
+- Recognizable in single color
+
+Avoid:
+- Literal DNA double helix clichés
+- Overly complex protein ribbon diagrams
+- Generic "sciencey" swooshes or gradients
+
+
+COLOR PALETTE
+-------------
+Primary:    #0D7377  (Deep Teal)
+            A rich teal that evokes both structural biology visualization 
+            software and the scientific rigor of the field. Confident and 
+            distinctive without being flashy.
+
+Secondary:  #1A2A2A  (Near Black)
+            For body text and strong contrasts. Softer than pure black, 
+            easier on the eyes for long-form reading.
+
+Accent:     #14A3A8  (Light Teal)
+            For hover states, highlights, and secondary emphasis. Provides 
+            energy and interactivity cues.
+
+Background: #FAFBFC  (Off-White)
+            A very subtle cool gray that's gentler than pure white and 
+            creates a calm, focused reading environment.
+
+
+TYPOGRAPHY
+----------
+Headings:   Source Serif 4 (or similar transitional serif)
+            - Conveys scholarly authority and timelessness
+            - The slight warmth of a serif balances the technical content
+            - Use semibold (600) weight for hierarchy
+
+Body:       Source Sans 3 (or similar humanist sans-serif)
+            - Clean and highly legible for scientific text
+            - Professional without being cold
+            - Use regular (400) for body, medium (500) for emphasis
+
+Code/Data:  JetBrains Mono or Fira Code (monospace)
+            - For code snippets, pipeline names, or data annotations
+            - Ligatures optional depending on context
+
+Type scale should emphasize generous line spacing (1.6–1.8 for body text) 
+to improve readability of dense scientific content.
+
+
+OVERALL AESTHETIC
+-----------------
+Calm, quantitative, modern computational biology.
+
+The design should feel like a well-organized research notebook or a 
+high-quality scientific review journal—trustworthy, precise, and 
+approachable. It should communicate intellectual seriousness without 
+intimidation, and technical depth without clutter.
+
+Think: the clarity of a Nature Methods figure, the restraint of a 
+well-designed preprint, the accessibility of a good textbook. 
+Not a biotech startup landing page. Not a pharma corporate site. 
+Not a flashy conference poster.
+
+The visual language should support long-form reading and complex 
+information hierarchies. Whitespace is a feature, not empty space 
+to fill. Every visual element should serve comprehension.

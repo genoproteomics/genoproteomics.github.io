@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Genoproteomics: The systematic study of how genetic and regulatory variation shapes the proteome. From genotype to proteotype, not stopping at RNA.">
+    <title>Genoproteomics | From Genotype to Proteotype</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Preconnect to Google Fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="#home" class="nav-logo">Genoproteomics</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#field-definition">Field Definition</a></li>
+                <li><a href="#research-areas">Research Areas</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#people-labs">People &amp; Labs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h1 class="hero-title">Genoproteomics</h1>
+                <p class="hero-tagline">From genotype to proteotype, not stopping at RNA.</p>
+                <div class="hero-overview">
+                    <p>Genoproteomics is the systematic study of how genetic and regulatory variation shapes the proteome—its composition, structure, modifications, interactions, and dynamics. By bridging the gap between genome and functional protein output, genoproteomics provides mechanistic explanations for phenotypic diversity that transcriptomics alone cannot capture.</p>
+                </div>
+                <div class="hero-why">
+                    <h2>Why Genoproteomics?</h2>
+                    <ul>
+                        <li><strong>Proteins are the phenotype.</strong> Most cellular functions are executed by proteins, yet GWAS and eQTL studies typically stop at RNA, missing post-transcriptional, translational, and post-translational regulation.</li>
+                        <li><strong>Variants act through structure.</strong> Missense variants, PTM-altering mutations, and splicing changes reshape protein conformation, stability, and interaction networks—effects invisible at the transcript level.</li>
+                        <li><strong>Quantitative, reproducible rules.</strong> Genoproteomics seeks predictive models that connect sequence variation to measurable proteomic outcomes across conditions and species.</li>
+                        <li><strong>Therapeutic relevance.</strong> Most drugs target proteins, not RNA. Understanding how genetic variation modulates drug targets is essential for precision medicine.</li>
+                    </ul>
+                </div>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary">Read the Field Manifesto (PDF)</a>
+                    <a href="#research-areas" class="btn btn-secondary">View Research Areas</a>
+                    <a href="#contact" class="btn btn-secondary">Get Involved</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Field Definition Section -->
+        <section id="field-definition" class="section">
+            <div class="container">
+                <h2>Field Definition</h2>
+                
+                <div class="definition-block">
+                    <p class="formal-definition"><strong>Genoproteomics</strong> is the integrated study of how genetic variation—including SNPs, indels, structural variants, and regulatory polymorphisms—propagates through transcription, translation, and post-translational processing to determine the proteome's composition, structure, abundance, modifications, interactions, and turnover.</p>
+                </div>
+
+                <h3>How Genoproteomics Differs from Related Fields</h3>
+                
+                <p><strong>Genomics-only approaches</strong> characterize genetic variation and predict functional impact computationally, but typically lack direct measurement of protein-level consequences. They often assume that transcript abundance is a reliable proxy for protein output, which fails to account for translational efficiency, protein stability, and degradation.</p>
+                
+                <p><strong>Proteomics</strong> measures protein abundance, modifications, and interactions at scale, but traditionally treats the proteome as a static snapshot without systematic connection to the underlying genetic variation that produced it. Sample-to-sample differences are observed but not mechanistically explained.</p>
+                
+                <p><strong>Proteogenomics</strong> uses genomic and transcriptomic data to improve protein identification (e.g., detecting variant peptides, novel splice forms) but focuses primarily on cataloging what proteins exist rather than building predictive models of how genetic variation shapes the proteome.</p>
+                
+                <p>Genoproteomics goes further by seeking <em>causal, quantitative relationships</em> between genotype and proteotype—integrating variant effects on structure, PTMs, complexes, localization, and dynamics into unified mechanistic frameworks.</p>
+
+                <h3>Core Principles of Genoproteomics</h3>
+                
+                <ol class="core-principles">
+                    <li><strong>Proteome-first phenotype.</strong> The proteome—not the transcriptome—is the proximate determinant of most cellular functions. Genoproteomics prioritizes protein-level measurements as the ground truth for functional output.</li>
+                    <li><strong>Variant-resolved analysis.</strong> Every genotype can, in principle, produce a distinct proteotype. Genoproteomics systematically maps how individual variants and variant combinations alter protein properties.</li>
+                    <li><strong>Mechanistic integration with structure, PTMs, and complexes.</strong> Variant effects are interpreted through their impact on protein 3D structure, post-translational modification sites, interaction interfaces, and macromolecular complex assembly.</li>
+                    <li><strong>Dynamics and turnover.</strong> Proteins are not static. Genoproteomics incorporates synthesis rates, half-lives, degradation pathways, and condition-dependent regulation into its models.</li>
+                    <li><strong>Quantitative and reproducible rules.</strong> The field aims to develop predictive models—ideally with defined uncertainty—that can forecast proteomic outcomes from genomic inputs across cell types, conditions, and species.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Research Areas Section -->
+        <section id="research-areas" class="section section-alt">
+            <div class="container">
+                <h2>Research Areas</h2>
+                <p class="section-intro">Genoproteomics spans computational, structural, translational, evolutionary, and technological domains. Each sub-area addresses distinct questions while sharing the common goal of connecting genetic variation to proteomic outcomes.</p>
+
+                <div class="research-area">
+                    <h3>Computational Genoproteomics</h3>
+                    <p>Development of algorithms, statistical frameworks, and machine learning models to predict how genetic variants affect protein abundance, structure, and function.</p>
+                    <ul>
+                        <li>Building variant-to-proteotype prediction models that integrate sequence, structure, and expression data</li>
+                        <li>Statistical methods for pQTL discovery and fine-mapping with PTM-level resolution</li>
+                        <li>Deep learning approaches for predicting variant effects on protein stability and binding affinity</li>
+                        <li>Multi-omic data integration pipelines linking GWAS, eQTL, pQTL, and structural data</li>
+                    </ul>
+                </div>
+
+                <div class="research-area">
+                    <h3>Structural Genoproteomics</h3>
+                    <p>Investigation of how genetic variants alter protein three-dimensional structure, dynamics, and interaction surfaces, using both computational prediction and experimental validation.</p>
+                    <ul>
+                        <li>Systematic mapping of missense variant effects on AlphaFold-predicted structures</li>
+                        <li>Cryo-EM and NMR studies of variant-induced conformational changes</li>
+                        <li>Molecular dynamics simulations to predict variant impact on protein flexibility and allosteric communication</li>
+                        <li>Structural interpretation of disease-associated variants in protein complexes</li>
+                    </ul>
+                </div>
+
+                <div class="research-area">
+                    <h3>Translational Genoproteomics</h3>
+                    <p>Application of genoproteomics principles to human health, including precision medicine, drug target validation, and biomarker discovery.</p>
+                    <ul>
+                        <li>Pharmacogenomic models predicting how patient genotypes affect drug target protein levels and modifications</li>
+                        <li>Cancer proteogenomics with variant-resolved tumor proteome profiling</li>
+                        <li>pQTL-informed drug target prioritization and safety assessment</li>
+                        <li>Biomarker panels integrating genetic risk scores with proteomic readouts</li>
+                    </ul>
+                </div>
+
+                <div class="research-area">
+                    <h3>Evolutionary Genoproteomics</h3>
+                    <p>Study of how natural selection acts on the genotype-to-proteotype map across species and populations, and how proteome evolution constrains or enables phenotypic diversification.</p>
+                    <ul>
+                        <li>Comparative proteomics across species to identify conserved genotype–proteotype relationships</li>
+                        <li>Population-level pQTL studies to understand standing variation in proteome regulation</li>
+                        <li>Ancestral sequence reconstruction with experimental proteome phenotyping</li>
+                        <li>Epistasis and genetic background effects on protein expression and modification</li>
+                    </ul>
+                </div>
+
+                <div class="research-area">
+                    <h3>Technological Genoproteomics</h3>
+                    <p>Development and application of new experimental technologies that enable high-resolution, high-throughput genotype-to-proteotype mapping.</p>
+                    <ul>
+                        <li>Multiplexed proteomics methods (TMT, DIA) for large-scale pQTL studies</li>
+                        <li>Single-cell proteomics with linked genotype information</li>
+                        <li>CRISPR-based variant libraries coupled with proteome readouts</li>
+                        <li>Ribosome profiling and nascent chain analysis to capture translational regulation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="section">
+            <div class="container">
+                <h2>Resources</h2>
+                <p class="section-intro">A curated collection of tools, publications, and datasets for genoproteomics research. This page will expand as the field develops.</p>
+
+                <div class="resource-block">
+                    <h3>Code &amp; Pipelines</h3>
+                    <p>Open-source tools and analysis pipelines for genoproteomics workflows.</p>
+                    <ul>
+                        <li><a href="#">genoprot-pipeline</a> — End-to-end variant-to-proteotype integration pipeline (Python/Snakemake)</li>
+                        <li><a href="#">pQTL-map</a> — Statistical framework for protein quantitative trait locus mapping with PTM resolution</li>
+                        <li><a href="#">struct-variant</a> — Structural impact prediction for coding variants using AlphaFold models</li>
+                        <li><a href="#">proteoturnover</a> — Analysis tools for protein half-life and degradation rate estimation</li>
+                    </ul>
+                </div>
+
+                <div class="resource-block">
+                    <h3>Key Papers &amp; Reviews</h3>
+                    <p>Foundational publications that define or advance the genoproteomics framework. This list will be updated as the field matures and key works emerge.</p>
+                    <ul>
+                        <li>Author A et al. "Title of foundational pQTL study." <em>Journal Name</em>, Year. <a href="#">[Link]</a></li>
+                        <li>Author B et al. "Title of proteogenomics methods paper." <em>Journal Name</em>, Year. <a href="#">[Link]</a></li>
+                        <li>Author C et al. "Title of variant-structure relationship study." <em>Journal Name</em>, Year. <a href="#">[Link]</a></li>
+                        <li>Author D et al. "Title of translational genoproteomics application." <em>Journal Name</em>, Year. <a href="#">[Link]</a></li>
+                        <li>Author E et al. "Title of evolutionary proteome analysis." <em>Journal Name</em>, Year. <a href="#">[Link]</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-block">
+                    <h3>Datasets</h3>
+                    <p>Representative datasets useful for genoproteomics research. Links and accession numbers will be added as resources are compiled.</p>
+                    <ul>
+                        <li><strong>Genotype + deep proteomics + PTMs:</strong> Population-scale studies with matched WGS/WES and quantitative proteomics including phosphorylation, ubiquitination, and other modifications.</li>
+                        <li><strong>Ribosome profiling + proteomics:</strong> Matched translational efficiency and protein abundance measurements to dissect post-transcriptional regulation.</li>
+                        <li><strong>Structural variant proteome maps:</strong> Datasets linking SVs and CNVs to protein-level consequences.</li>
+                        <li><strong>Time-course protein turnover:</strong> Pulse-chase or SILAC-based measurements of protein synthesis and degradation rates across genotypes.</li>
+                        <li><strong>Single-cell multi-omics:</strong> Emerging datasets with linked genotype, transcriptome, and proteome at single-cell resolution.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- People & Labs Section -->
+        <section id="people-labs" class="section section-alt">
+            <div class="container">
+                <h2>People &amp; Labs</h2>
+                <p class="section-intro">Genoproteomics is an emerging field, and this page will serve as a directory of labs, consortia, and individual contributors working at the intersection of genetic variation and proteome biology. If your work fits this framework, we encourage you to reach out to be listed here.</p>
+
+                <div class="labs-grid">
+                    
+                    <div class="lab-card">
+                        <h4 class="lab-name">Kushal Raj Roy</h4>
+                        <p class="lab-institution">Genoproteomics Initiative</p>
+                        <p class="lab-focus">Owner and Founder. Computational structural biology, translational GTPases, variant-resolved proteome analysis.</p>
+                        <a href="#" class="lab-link">Website →</a>
+                    </div>
+
+                    <div class="lab-card">
+                        <h4 class="lab-name">Example Lab 1</h4>
+                        <p class="lab-institution">University of Example, Department of Biochemistry</p>
+                        <p class="lab-focus">Computational genoproteomics, pQTL mapping, multi-omic integration.</p>
+                        <a href="#" class="lab-link">Lab Website →</a>
+                    </div>
+
+                    <div class="lab-card">
+                        <h4 class="lab-name">Example Lab 2</h4>
+                        <p class="lab-institution">Institute of Molecular Biology, Example City</p>
+                        <p class="lab-focus">Structural genoproteomics, cryo-EM, variant impact on protein complexes.</p>
+                        <a href="#" class="lab-link">Lab Website →</a>
+                    </div>
+
+                    <div class="lab-card">
+                        <h4 class="lab-name">Example Lab 3</h4>
+                        <p class="lab-institution">Example Medical School, Department of Systems Biology</p>
+                        <p class="lab-focus">Translational genoproteomics, cancer proteomics, precision medicine.</p>
+                        <a href="#" class="lab-link">Lab Website →</a>
+                    </div>
+
+                </div>
+
+                <div class="join-cta">
+                    <p>Working on related problems? <a href="#contact">Contact us</a> to be included in this directory.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>Genoproteomics is a community-driven initiative. Whether you're interested in contributing resources, joining the directory, or discussing the conceptual framework, we'd like to hear from you.</p>
+                
+                <div class="contact-info">
+                    <p><strong>General Inquiries:</strong> <a href="mailto:contact@genoproteomics.org">contact@genoproteomics.org</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/genoproteomics">github.com/genoproteomics</a></p>
+                </div>
+
+                <div class="contact-cta">
+                    <a href="mailto:contact@genoproteomics.org" class="btn btn-primary">Send Us a Message</a>
+                    <a href="https://github.com/genoproteomics/genoproteomics.github.io/issues" class="btn btn-secondary">Open a GitHub Issue</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Genoproteomics Initiative. Content licensed under <a href="#">CC BY 4.0</a>.</p>
+            <p class="footer-tagline">From genotype to proteotype, not stopping at RNA.</p>
+        </div>
+    </footer>
+
+    <!-- Minimal JS for mobile nav toggle and smooth scrolling -->
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        navToggle.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !expanded);
+            navLinks.classList.toggle('nav-open');
+        });
+
+        // Close mobile nav when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('nav-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
