@@ -1643,7 +1643,15 @@
 
     <script>
         // Team Members
-        const teamMembers = [];
+        const teamMembers = [
+                {
+        name: "Unimilita Das Moon",
+        initials: "UDM",
+        role: "Microbiologist",
+        institution: "Brac University",
+        focus: "Microbiology • Multi-Omics",
+        badge: "Lead" },
+        ];
 
         function renderTeamMembers() {
             const grid = document.getElementById('teamGrid');
@@ -1661,20 +1669,6 @@
                 grid.appendChild(card);
             });
         }
-const teamMembers = [
-    {
-        name: "Unimilita Das Moon",
-        initials: "UDM",
-        role: "Microbiologist",
-        institution: "Brac University",
-        focus: "Microbiology • Multi-Omics",
-        badge: "Lead"  // or null, "Advisor", etc.
-    },
-    // Add more members here...
-];
-
-
-
 
         
         // Navigation
