@@ -1517,22 +1517,6 @@
             </div>
         </div>
     </section>
-
-                <div class="team-grid" id="teamGrid">
-                <div class="team-card founder-card">
-                    <div class="team-avatar">
-                        <div class="team-avatar-inner">UDM</div>
-                    </div>
-                    <h3 class="team-name">Unmilita Das Moon</h3>
-                    <p class="team-role">Member</p>
-                    <p class="team-institution">Genoproteomics Initiative</p>
-                    <p class="team-focus">Microbiology • Genomics • Multi-Omics</p>
-                    <span class="team-badge">Member</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
     
     <!-- Join Section -->
     <section class="content-section" id="join">
@@ -1677,7 +1661,22 @@
                 grid.appendChild(card);
             });
         }
+const teamMembers = [
+    {
+        name: "Unimilita Das Moon",
+        initials: "UDM",
+        role: "Microbiologist",
+        institution: "Brac University",
+        focus: "Microbiology • Multi-Omics",
+        badge: "Lead"  // or null, "Advisor", etc.
+    },
+    // Add more members here...
+];
 
+
+
+
+        
         // Navigation
         const navToggle = document.getElementById('navToggle');
         const navLinks = document.getElementById('navLinks');
